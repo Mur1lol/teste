@@ -1,0 +1,65 @@
+{
+    "description": "Arquivo de configuração do ChessAI",
+    "version": "1.0",
+    
+    "serial": {
+        "port": "/dev/ttyUSB0",
+        "baudrate": 115200,
+        "timeout": 1,
+        "alternative_ports": [
+            "/dev/ttyUSB0",
+            "/dev/ttyUSB1", 
+            "/dev/ttyACM0",
+            "/dev/ttyACM1"
+        ]
+    },
+    
+    "stockfish": {
+        "path": "auto",
+        "depth": 10,
+        "time_limit": 1.0,
+        "threads": 2,
+        "hash_size": 256,
+        "alternative_paths": [
+            "/usr/games/stockfish",
+            "/usr/local/bin/stockfish",
+            "/usr/bin/stockfish",
+            "stockfish"
+        ]
+    },
+    
+    "game": {
+        "player_color": "white",
+        "ai_color": "black", 
+        "difficulty": "medium",
+        "move_validation": true,
+        "auto_save": true
+    },
+    
+    "hardware": {
+        "board_size": 8,
+        "sensor_threshold": 500,
+        "led_brightness": 255,
+        "animation_speed": 50
+    },
+    
+    "logging": {
+        "level": "INFO",
+        "file": "chessai.log",
+        "max_size": "10MB",
+        "backup_count": 5,
+        "console_output": true
+    },
+    
+    "communication": {
+        "json_timeout": 5,
+        "max_retries": 3,
+        "heartbeat_interval": 30
+    },
+    
+    "debug": {
+        "simulate_hardware": false,
+        "verbose_moves": true,
+        "log_all_messages": false
+    }
+}

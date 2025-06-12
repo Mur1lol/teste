@@ -1,0 +1,26 @@
+# ChessAI - Sistema de Xadrez Físico Interativo
+# Dependências Python para Raspberry Pi
+
+# Biblioteca de xadrez
+python-chess==1.999
+
+# Comunicação serial
+pyserial==3.5
+
+# Processamento JSON (já incluído no Python padrão)
+# json
+
+# Threading (já incluído no Python padrão)
+# threading
+
+# Logging (já incluído no Python padrão)
+# logging
+
+# Pathlib (já incluído no Python padrão)
+# pathlib
+
+# Para instalação adicional via apt (no Raspberry Pi):
+# sudo apt-get update
+# sudo apt-get install stockfish
+# sudo apt-get install python3-pip
+# pip3 install -r requirements.txt
