@@ -246,7 +246,7 @@ class ChessAIServer:
             self.logger.error(f"Erro ao decodificar JSON: {e}")
         except Exception as e:
             self.logger.error(f"Erro ao processar mensagem: {e}")
-      def handle_game_start(self) -> None:
+    def handle_game_start(self) -> None:
         """Manipula o início do jogo"""
         self.logger.info("=== INICIANDO NOVA PARTIDA DE XADREZ ===")
         
@@ -268,7 +268,7 @@ class ChessAIServer:
             self.logger.info(f"Linha {8-i}: {row}")
         
         self.send_board_matrix(board_matrix)
-      def handle_player_move_origin(self, data: Dict) -> None:
+    def handle_player_move_origin(self, data: Dict) -> None:
         """
         Manipula quando o jogador remove uma peça (origem do movimento)
         
@@ -325,7 +325,7 @@ class ChessAIServer:
             
         except ValueError as e:
             self.logger.error(f"Erro ao processar posição {from_square}: {e}")
-      def handle_player_move_complete(self, data: Dict) -> None:
+    def handle_player_move_complete(self, data: Dict) -> None:
         """
         Manipula quando o jogador completa um movimento
         
@@ -371,7 +371,7 @@ class ChessAIServer:
             self.logger.error(f"Erro ao processar movimento: {e}")
         
         self.waiting_for_move = False
-      def handle_ai_move_confirmed(self) -> None:
+    def handle_ai_move_confirmed(self) -> None:
         """Manipula confirmação de movimento da IA"""
         self.logger.info("=== MOVIMENTO DA IA CONFIRMADO PELO JOGADOR ===")
         self.waiting_for_move = False
